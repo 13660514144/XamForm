@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamForm.Views.Page1"
+             BackgroundColor="#808080">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="DefaultButton" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="Black"></Setter>
+                <Setter Property="TextColor" Value="#dedede"></Setter>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ScrollView>
+        <StackLayout Orientation="Vertical"  Spacing="10" VerticalOptions="End" Padding="10">
+        <Frame BackgroundColor="Navy" HeightRequest="40" Margin="0,0,0,20">
+            <Label Text="0" VerticalOptions="Center" HorizontalOptions="End"
+                   TextColor="White" FontSize="35"  FontAttributes="Bold"  x:Name="Equ"/>
+        </Frame>
+        <Frame BackgroundColor="Black" HeightRequest="40" Margin="0,0,0,20">
+            <Label Text="" VerticalOptions="Center" HorizontalOptions="End"
+                   TextColor="White"  FontSize="20" x:Name="Cash"/>
+        </Frame>
+        <StackLayout Orientation="Vertical">
+            <StackLayout Orientation="Horizontal"   Spacing="10">
+                <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
+                    <Button  Text="清除" HeightRequest="60" Clicked="Onclear" 
+                         FontSize="30" FontAttributes="Bold"      Style="{StaticResource DefaultButton}"/>
+                    <StackLayout Orientation="Horizontal" HeightRequest="60">
+                        <Button HorizontalOptions="FillAndExpand"  FontSize="30" FontAttributes="Bold"  Clicked="OnNum7"   Text="7"  Style="{StaticResource DefaultButton}"/>
+                        <Button HorizontalOptions="FillAndExpand"   FontSize="30" FontAttributes="Bold"  Clicked="OnNum8"  Text="8" Style="{StaticResource DefaultButton}" />
+                        <Button HorizontalOptions="FillAndExpand"  FontSize="30" FontAttributes="Bold"  Clicked="OnNum9"  Text="9" Style="{StaticResource DefaultButton}" />
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" HeightRequest="60">
+                        <Button HorizontalOptions="FillAndExpand"  FontSize="30" FontAttributes="Bold"  Clicked="OnNum4"  Text="4" Style="{StaticResource DefaultButton}" />
+                        <Button HorizontalOptions="FillAndExpand"  FontSize="30" FontAttributes="Bold"  Clicked="OnNum5"  Text="5" Style="{StaticResource DefaultButton}"/>
+                        <Button HorizontalOptions="FillAndExpand"  FontSize="30" FontAttributes="Bold"  Clicked="OnNum6"  Text="6" Style="{StaticResource DefaultButton}"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" HeightRequest="60">
+                        <Button HorizontalOptions="FillAndExpand"  FontSize="30" FontAttributes="Bold"  Clicked="OnNum1"   Text="1" Style="{StaticResource DefaultButton}" />
+                        <Button HorizontalOptions="FillAndExpand"  FontSize="30" FontAttributes="Bold"  Clicked="OnNum2"   Text="2" Style="{StaticResource DefaultButton}"/>
+                        <Button HorizontalOptions="FillAndExpand"  FontSize="30" FontAttributes="Bold"  Clicked="OnNum3"   Text="3" Style="{StaticResource DefaultButton}"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" HeightRequest="60">
+                        <Button HorizontalOptions="FillAndExpand"  Text="0" 
+                                Style="{StaticResource DefaultButton}"  FontSize="30" FontAttributes="Bold"  Clicked="OnNum0"/>
+                        <Button HorizontalOptions="FillAndExpand"     FontSize="30" FontAttributes="Bold"  Text="." 
+                                Style="{StaticResource DefaultButton}"  Clicked="Ondot"/>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout Orientation="Vertical" WidthRequest="60">
+                    <Button  Text="÷" Clicked="Onexcept"  FontSize="30" FontAttributes="Bold"  HeightRequest="60" Style="{StaticResource DefaultButton}"/>
+                    <Button Text="*"  Clicked="Onride"  FontSize="30" FontAttributes="Bold"  HeightRequest="60" Style="{StaticResource DefaultButton}"/>
+                    <Button Text="+"  Clicked="Onplus"  FontSize="30" FontAttributes="Bold"  HeightRequest="60" Style="{StaticResource DefaultButton}"/>
+                    <Button Text="-"  Clicked="Onreduce"  FontSize="30" FontAttributes="Bold"  HeightRequest="60" Style="{StaticResource DefaultButton}"/>
+                    <Button Text="="  Clicked="Onect"  FontSize="30" FontAttributes="Bold"  HeightRequest="60" Style="{StaticResource DefaultButton}"/>
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </StackLayout>
+    </ScrollView>
+</ContentPage>

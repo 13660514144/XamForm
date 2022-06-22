@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamForm.Views.QrScanPage"
+             Title="{Binding Title}">
+    <ContentPage.Content>
+        <Frame CornerRadius="20"  OutlineColor="Blue"  Padding="0" Margin="5,5,5,5">
+            <ScrollView>
+                <StackLayout VerticalOptions="Center">
+            <!--<Button x:Name="photo"
+                    Text="Photo"
+                    Clicked="photo_Clicked"/>
+            <Button x:Name="video"
+                    Text="Video"
+                    Clicked="video_Clicked"/>-->
+            <Button x:Name="scan"
+                    Text="Scan"  FontSize="30"
+                    Clicked="scan_Clicked"/>
+
+            <Label x:Name="lab" Text="扫描文本" FontSize="30" HorizontalOptions="FillAndExpand"/>
+                <StackLayout Orientation="Vertical">
+                    <Label Text="商品名称" x:Name="Qname" FontSize="20"></Label>
+                    <Label Text="条码" x:Name="Qcode" FontSize="20"></Label>
+                    <Label Text="预估价格" x:Name="Qprice" FontSize="20"></Label>
+                    <Label Text="品牌"  x:Name="Qbrand" FontSize="20"></Label>
+                    <Label Text="厂商"  x:Name="Qfactory" FontSize="20"></Label>
+                    <Label Text="规格"  x:Name="Qnorms" FontSize="20"></Label>
+                </StackLayout>
+                <Button FontSize="30"
+                x:Name="CustomScanBarCodeBtn"
+                Clicked="CustomScanBarCodeBtn_OnClicked"
+                Text="自定义扫描二维码">
+            </Button>
+            <Label x:Name="CustomScanResult" HorizontalOptions="CenterAndExpand">
+            </Label>
+
+            <Button FontSize="30"
+                x:Name="BuildQrCdoeBtn"
+                Clicked="BuildQrCdoeBtn_OnClicked"
+                Text="创建二维码">
+            </Button>
+            <Grid x:Name="QrCodeSite" HeightRequest="300">
+            </Grid>
+                
+        </StackLayout>
+            </ScrollView>
+        </Frame>
+    </ContentPage.Content>
+</ContentPage>

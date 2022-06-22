@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamForm.Views.BookPage">
+    <ContentPage.Content>
+        
+        <Frame CornerRadius="20"  OutlineColor="Blue"  Padding="0" Margin="5,5,5,5">
+            <ScrollView>
+                <StackLayout>
+                    <Button x:Name="GetBook" Text="通讯录" Clicked="GetBook_Clicked"/>
+                <Entry x:Name="id" Text="{Binding UserName}" Placeholder="id"
+                       PlaceholderColor="#88cece" FontSize="16"></Entry>
+                <Entry x:Name="namePrefix" Text="{Binding UserName}" Placeholder="namePrefix"
+                       PlaceholderColor="#88cece" FontSize="16"></Entry>
+                <Entry x:Name="givenName" Text="{Binding UserName}" Placeholder="givenName"
+                       PlaceholderColor="#88cece" FontSize="16"></Entry>
+                <Entry x:Name="middleName" Text="{Binding UserName}" Placeholder="middleName"
+                       PlaceholderColor="#88cece" FontSize="16"></Entry>
+                <Entry x:Name="familyName" Text="{Binding UserName}" Placeholder="familyName"
+                       PlaceholderColor="#88cece" FontSize="16"></Entry>
+                <Entry x:Name="nameSuffix" Text="{Binding UserName}" Placeholder="nameSuffix"
+                       PlaceholderColor="#88cece" FontSize="16"></Entry>
+                <Entry x:Name="displayName" Text="{Binding UserName}" Placeholder="displayName"
+                       PlaceholderColor="#88cece" FontSize="16"></Entry>
+                <Editor x:Name="phones" Text="{Binding UserName}" Placeholder="phones"
+                       PlaceholderColor="#88cece" FontSize="16"></Editor>
+                    <Editor x:Name="emails" Text="{Binding UserName}" Placeholder="emails"
+                       PlaceholderColor="#88cece" FontSize="16"></Editor>
+            </StackLayout>
+            </ScrollView>
+        </Frame>
+    </ContentPage.Content>
+</ContentPage>

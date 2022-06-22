@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamForm.Views.RefitApiPage"
+             Title="{Binding Title}">
+    <ContentPage.Content>
+        <Frame CornerRadius="20"  OutlineColor="Blue"  Padding="0" Margin="5,5,5,5">
+            <StackLayout x:Name="outerStack" >
+                <ScrollView>
+                    <StackLayout x:Name="BodyContect"  VerticalOptions="FillAndExpand"></StackLayout>
+                </ScrollView>
+                <StackLayout   Orientation ="Horizontal" HorizontalOptions="Center" >
+                    <Label Text="用时(毫秒)："  FontSize="20"></Label>
+                    <Label FontSize="20" x:Name="lab" ></Label>
+                </StackLayout>
+                <StackLayout x:Name="foot" Orientation ="Horizontal" HorizontalOptions="Center" >
+                    <Button Text="上一页" x:Name="Pre"  FontSize="25" 
+                                 IsEnabled="False"
+                                BackgroundColor="Blue" TextColor="White" Margin="10,5,10,5"></Button>
+                    <Button Text="下一页" x:Name="Next" FontSize="25" 
+                                 IsEnabled="False" 
+                                BackgroundColor="Blue" TextColor="White" Margin="10,5,10,5"></Button>
+                </StackLayout>
+
+            </StackLayout>
+        </Frame>
+    </ContentPage.Content>
+</ContentPage>
